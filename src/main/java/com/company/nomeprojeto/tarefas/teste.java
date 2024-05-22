@@ -1,4 +1,3 @@
 package com.company.nomeprojeto.tarefas;
 
-public class teste {
-}
+public class teste {//teste de commit }
