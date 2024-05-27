@@ -22,4 +22,8 @@ public class TarefasFacade {
         return tarefaDTO;
     }
 
+    public TarefaDTO getById (Long tarefaId){
+        return tarefas.get(tarefaId);
+    }
+
 }
