@@ -4,7 +4,9 @@ package com.company.nomeprojeto.tarefas.facade;
 import com.company.nomeprojeto.tarefas.dto.TarefaDTO;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 @Service
@@ -25,5 +27,10 @@ public class TarefasFacade {
     public TarefaDTO getById (Long tarefaId){
         return tarefas.get(tarefaId);
     }
+
+    public List<TarefaDTO> getAll(){
+        return new ArrayList<>(tarefas.values());
+    }
+
 
 }
