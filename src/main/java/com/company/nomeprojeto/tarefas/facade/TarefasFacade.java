@@ -32,5 +32,10 @@ public class TarefasFacade {
         return new ArrayList<>(tarefas.values());
     }
 
+    public String delete (Long tarefaId){
+        tarefas.remove(tarefaId);
+        return "DELETED";
+    }
+
 
 }
