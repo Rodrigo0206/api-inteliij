@@ -17,4 +17,9 @@ public class TarefasFacade {
         tarefas.put(proximoId, tarefaDTO );
         return tarefaDTO;
     }
+    public TarefaDTO atualizar (TarefaDTO tarefaDTO, Long tarefaId){
+        tarefas.put(tarefaId, tarefaDTO);
+        return tarefaDTO;
+    }
+
 }
