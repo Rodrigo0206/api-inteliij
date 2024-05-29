@@ -18,4 +18,11 @@ public class TarefasAPI {
     public TarefaDTO criar(@RequestBody TarefaDTO tarefaDTO){
         return tarefasFacade.criar(tarefaDTO);
     }
+    @PutMapping("/{tarefaId}")
+    @ResponseBody
+    public TarefaDTO atualizar(@PathVariable("tarefaId") Long tarefaId,
+                              @RequestBody TarefaDTO tarefaDTO){
+        return tarefasFacade.atualizar(tarefaDTO,tarefaId);
+
+    }
 }
