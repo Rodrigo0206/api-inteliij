@@ -7,6 +7,8 @@ import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @Controller
 @RequestMapping(value = "/tarefas", produces = MediaType.APPLICATION_JSON_VALUE)
 public class TarefasAPI {
@@ -23,6 +25,12 @@ public class TarefasAPI {
     public TarefaDTO atualizar(@PathVariable("tarefaId") Long tarefaId,
                               @RequestBody TarefaDTO tarefaDTO){
         return tarefasFacade.atualizar(tarefaDTO,tarefaId);
+
+    }
+    @GetMapping
+    @ResponseBody
+    public List<TarefaDTO> getAll() {
+        return tarefasFacade.getAll();
 
     }
 }
