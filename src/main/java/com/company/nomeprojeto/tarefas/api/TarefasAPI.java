@@ -31,6 +31,10 @@ public class TarefasAPI {
     @ResponseBody
     public List<TarefaDTO> getAll() {
         return tarefasFacade.getAll();
-
+    }
+    @DeleteMapping("/{tarefaId}")
+    @ResponseBody
+    public String deletar(@PathVariable("tarefaId") Long tarefaId){
+        return tarefasFacade.delete(tarefaId);
     }
 }
